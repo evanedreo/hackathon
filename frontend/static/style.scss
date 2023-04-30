@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.bgimage{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../static/images/bgimg.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+    position: absolute;
+    z-index: 1;
+    
+}
+
+
+.hue-changer{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 2;
+    background-color: aquamarine;
+    opacity: 20%;
+}
+
+.home-content{
+    // background-color: red;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+    & h1{
+        font-family: 'Russo One', sans-serif;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 6rem;
+    }
+
+    & p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        padding-top: 1rem;
+    }
+
+    & a{
+        width: 15rem;
+        background-color: #00c406;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        display: block;
+        margin: auto;
+        margin-top: 4rem;
+        box-shadow: 0px 0px 0px 0px #424242;
+        color: white;
+        transition: all .1s;
+        text-align: center;
+        user-select: none;
+        text-decoration: none;
+
+        &:hover{
+            // background-color: #00ab05;
+            cursor: pointer;
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px 1px #c5c5c5;
+        }
+
+        &:active{
+            background-color: #05920a;
+            box-shadow: 0px 0px 0px 0px #424242;
+            transform: scale(0.95);
+        }
+    }
+
+    
+
+}
+
+aside{
+    width: 20%;
+    background-color: #424242;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    float: left;
+
+    & h2{
+        color: white;
+        font-family: 'Russo One', sans-serif;
+        font-weight: 400;
+        font-size: 3rem;
+        background-color: #00c406;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+    }
+
+    & ul{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        transform: translateY(-3rem);
+        
+
+        & li{
+
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: solid 1px #bfbfbf;
+            transition: all .3s;
+            user-select: none;
+            
+            & span{
+                color: white;
+                transform: translateY(3px);
+            }
+
+            & a{
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                padding-left: 10px;
+            }
+
+            &:hover{
+                background-color: #292929;
+                cursor: pointer;
+                transform: scaleY(1.05) translateY(-5px);
+                & > a{
+                    color: #68ed6c;
+                }
+
+                & > span{
+                    color: #68ed6c;
+                }
+            }
+        }
+    }
+}
+
+.selected{
+    & > a{
+        color: #68ed6c;
+    }
+
+    & > span{
+        color: #68ed6c;
+    }
+}
+
+.logout{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: solid 1px #bfbfbf;
+    list-style: none;
+    text-decoration: none;
+
+    & span{
+        color: white;
+        padding-left: 10px;
+        transform: translateY(3px);
+    }
+
+    & p{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline;
+        
+    }
+
+    &:hover{
+        background-color: #292929;
+        cursor: pointer;
+    }
+  
+}
+main{
+    width: 80%;
+    float: right;
+    height: 100vh;
+}
+
+#one{
+    background-color: white;
+    overflow: scroll;
+}
+
+#two{
+    background-color: white;
+
+    & > h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        width: 80%;
+        text-align: left;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    & > p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: solid 1px #bfbfbf;
+        width: 80%;
+        text-align: left;
+        margin: auto;
+    }
+
+}
+
+.gay{
+    height:min-content;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+
+    & > img{
+        display: block;
+        margin: auto;
+
+        margin-top: 10px;
+    }
+}
+
+.statistics{
+
+    
+    & > p{
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 10px;
+
+    }
+
+    
+}
+
+#three{
+    background-color: white;
+    overflow: scroll;
+
+    
+
+    
+}
+
+.hide{
+    display: none;
+}
+
+.specielist{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    height: min-content;
+    
+
+    & > div{
+        background-color: #00c406;
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: center;
+        border-left: solid 1px #deffe9;
+        vertical-align: middle;
+        &:hover{
+            cursor: pointer;
+            background-color: #09920d;
+        }
+    }
+}
+
+.specieliststats{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    height: min-content;
+    
+
+    & > div{
+        background-color: #00c406;
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: center;
+        border-left: solid 1px #deffe9;
+        vertical-align: middle;
+        &:hover{
+            cursor: pointer;
+            background-color: #09920d;
+        }
+    }
+}

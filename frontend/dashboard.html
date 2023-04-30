@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tree Analyzer</title>
+        <link rel="stylesheet" href="./static/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'> <!-- comfortaa font -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </head>
+    <body class="home-body">
+        <aside>
+            <a href="index.html"> ForTree <a>
+            <ul>
+                <li id="vbutton"><span class="material-icons md-48">visibility</span><a href="#">Visualize</a></li>
+                <li id="pbutton"><span class="material-icons">book</span><a href="#">Plan</a></li>
+                <li id="sbutton"><span class="material-icons">equalizer</span><a href="#">Statistics</a></li>
+            </ul>
+            <!-- <a class="logout" href="index.html"><p>Logout</p><span class="material-icons md-24">logout</span></a> -->
+            <!-- <a href="index.html" class="logout">Log Out<span class="material-icons md-24">logout</span></a> -->
+        </aside>
+        <main id="one">
+        <div class="specielist">
+
+                <div id="elm"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Elm Tree</div>
+                <div id="birch"><img style="width:15px;height:15px;"src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Birch Tree</div>
+                <div id="willow"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Willow Tree</div>
+                <div id="fir"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Fir Tree</div>
+                <div id="oak"><img  style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Oak Tree</div>
+                <div id="beech"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Beech Tree</div>
+                <div id="pine"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Pine Tree</div>
+                <div id="maple"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Maple Tree</div>
+            </div>
+            <!-- [scatter][Scatter MultiAxis][Bar][Bubble] -->
+            <div class="chart">
+                <h2 class="title">Tree Age vs  - Scatter Diagram</h2>
+                <div class="scatter-graph" style="width: 80%; padding: 20px; background-color: white; margin: auto; margin-top: 20px; border-radius: 20px; border: solid 3px black;">
+                    <canvas id="scatterChart"></canvas>
+                </div>
+
+                <h2 class="title">Tree Wounds vs Mushrooms</h2>
+                <div class="bar-graph" style="width: 80%; padding: 15px; background-color: white; margin: auto; margin-top: 20px; border-radius: 20px; border: solid 3px black;">
+                    <canvas id="barChart"></canvas>
+                </div>
+
+                <h2 class="title">Height vs Volume vs Profit - Bubble Chart</h2>
+                <div class="bubble-graph" style="width: 80%; padding: 15px; background-color: white; margin: auto; margin-top: 20px; border-radius: 20px; border: solid 3px black;">
+                    <canvas id="bubbleChart"></canvas>
+                </div>
+                <div style="height: 20px;"></div>
+            </div>
+            
+            <!-- <div class="scattermulti-graph" style="width: 80%; padding: 15px; background-color: white; margin: auto; margin-top: 20px; border-radius: 20px; border: solid 3px black;">
+                <canvas id="scattermultiChart"></canvas>
+            </div> -->
+            
+        </main>
+        <main id="two" class="hide">
+            <div style="height: 20px;"></div>
+
+            <!-- <h2>Priority: There are 7 Oak trees and 6 Pine trees that are heavily wounded (> 30%)</h2>
+            <h2>Trees that have more than 10% of mushrooms, with visible surface roots:</h2>
+            <div style="height: 30px;"></div>
+            <p>Elm Tree: 10</p>
+            <p>Birch Tree: 16</p>
+            <p>Willow Tree: 28</p>
+            <p>Fir Tree: 7</p>
+            <p>Oak Tree: 15</p>
+            <p>Beech Tree: 26</p>
+            <p>Pine Tree: 37</p>
+            <p>Maple Tree: 48</p>
+            <p style="text-align: center;">Total trees that are suggested to be cut: 166</p>
+            <p  style="text-align: center; border-top: none; padding-top: 2px;">Estimated profit: $25000</p> -->
+        <div class="resultpage">
+            <!-- <div class="top-bar">
+                <div class="top"> -->
+                    <!-- <h1><button class="white-left-button"><i class="fi fi-br-arrow-small-left"></i></button>Results</h1> -->
+                    <!-- <h1><i href="index.html" class="fi fi-br-arrow-small-left"></i>Results</h1>
+                </div> -->
+                
+                <div class="specielist">
+                        
+                    <div id="elm"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Elm Tree</div>
+                    <div id="birch"><img style="width:15px;height:15px;"src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Birch Tree</div>
+                    <div id="willow"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Willow Tree</div>
+                    <div id="fir"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Fir Tree</div>
+                    <div id="oak"><img  style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Oak Tree</div>
+                    <div id="beech"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Beech Tree</div>
+                    <div id="pine"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Pine Tree</div>
+                    <div id="maple"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Maple Tree</div>
+                
+            </div>
+                <div class="flex-box">
+                    
+                    <div class="container">
+                        <div class="box">
+                            <h3>Total Suggested Trees To Be Cut</h3>
+                            <h2>166</h2>
+                            <p>Trees that have more than 10% of mushrooms, with visible surface roots</p>
+                        </div>
+                        <div class="box">
+                            <h3>Priority Trees To Be Cut</h3>
+                            <h2>>30%</h2>
+                            <p>7 Oak trees and 6 Pine trees are heavily wounded</p>
+                        </div>
+                        <div class="profit-box">
+                            <h3>Estimated Profit</h3>
+                            <h2>$25,000</h2>
+                        </div>
+                    </div>
+                    <div class="table-grid">
+                        <table>
+                            <tr>
+                                <th ><h2>Tree Name</h2></th>
+                                <th ><h2>Quantity</h2></th>
+                            </tr>
+                            <tr>
+                                <td>Elm Tree</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Birch Tree</th>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Willow Tree</th>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>Fir Tree</th>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Oak Tree</th>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Beech Tree</th>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>Pine Tree</th>
+                                <td>37</td>
+                            </tr>
+                            <tr>
+                                <td>Maple Tree</th>
+                                <td>48</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <!-- pp -->
+
+
+        </main>
+        <main id="three" class="hide">
+            <div class="specielist">
+                <div id="elmstats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Elm Tree</div>
+                <div id="birchstats"><img style="width:15px;height:15px;"src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Birch Tree</div>
+                <div id="willowstats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Willow Tree</div>
+                <div id="firstats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Fir Tree</div>
+                <div id="oakstats"><img  style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Oak Tree</div>
+                <div id="beechstats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Beech Tree</div>
+                <div id="pinestats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Pine Tree</div>
+                <div id="maplestats"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Maple Tree</div>
+            </div>
+            <!-- <div class="specielist">
+                        
+                <div id="elm"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Elm Tree</div>
+                <div id="birch"><img style="width:15px;height:15px;"src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Birch Tree</div>
+                <div id="willow"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Willow Tree</div>
+                <div id="fir"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Fir Tree</div>
+                <div id="oak"><img  style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Oak Tree</div>
+                <div id="beech"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Beech Tree</div>
+                <div id="pine"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Pine Tree</div>
+                <div id="maple"><img style="width:15px;height:15px;" src= "https://cdn.discordapp.com/attachments/1101569049680420990/1102001448637702194/image.png">Maple Tree</div>
+            
+        </div> -->
+        <div class="statistic">
+            <div style="height: 30px;"></div>
+            <div class="gay">
+                <div class="statistics">
+                    <p id="namestats">Name: Elm Tree</p>
+                    <p id="abundencestats">Abundence: 60000</p>
+                    <p id="profitsstats">Profits: 27</p>
+                    <p id="maxheightstats">Max Height: 35</p>
+                    <p id="moisturestats">Moisture: Prefers moist but adaptable</p>
+                    <p id="soilstats">Soil: Prefers rich, well-drained soils</p>
+                    <p id="shadestats">Shade: 27</p>
+                    </div>
+                <div style="height: 30px;"></div>
+                <img src="" alt="" id="imagestats">
+            </div>
+           
+
+            <div class="bar-graph" style="width: 80%; padding: 15px; background-color: white; margin-left: 15%; border-radius: 20px; border: solid 3px black; margin-top: 40px;">
+                <canvas id="statsChartone"></canvas>
+            </div>
+
+            <div class="bar-graph" style="width: 80%; padding: 15px; background-color: white; margin-left: 15%; border-radius: 20px; border: solid 3px black; margin-top: 40px;">
+                <canvas id="statsCharttwo"></canvas>
+            </div>
+        </div>
+        </main>
+
+        
+        <script src="./index.js"></script>
+        <script>
+            
+            
+            // const DATA_COUNT = 7;
+            // const NUMBER_CFG = {count: DATA_COUNT, rmin: 1, rmax: 1, min: 0, max: 100};
+
+            // const labels = Utils.months({count: 7});
+
+            
+
+            // console.log(species);
+
+
+            // {
+            //             label: 'Dataset 1',
+            //             data: [0, 10, 5, 2, 20, 30, 45],
+            //             borderColor: 'rgb(255, 99, 132)',
+            //             backgroundColor: 'rgb(255, 99, 132)',
+            //         },
+            //         {
+            //             label: 'Dataset 2',
+            //             data: [35, 20, 25, 11, 14, 9, 6],
+            //             borderColor: 'rgb(104, 237, 108)',
+            //             backgroundColor: 'rgb(0, 153, 161)',
+            //         }
+                
+        </script>
+        
+    </body>
+</html>
