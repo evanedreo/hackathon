@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ROOT_URLCONF = 'HackTheEarth2021.urls'
+ROOT_URLCONF = 'VikingHacks2023.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'HackTheEarth2021.wsgi.application'
+WSGI_APPLICATION = 'VikingHacks2023.wsgi.application'
 
 
 # Database
